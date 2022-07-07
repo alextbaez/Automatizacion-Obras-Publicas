@@ -1,0 +1,16 @@
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\AutomatizacionObrasPublica.exe
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\AutomatizacionObrasPublica.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\AutomatizacionObrasPublica.deps.json
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\AutomatizacionObrasPublica.runtimeconfig.json
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\AutomatizacionObrasPublica.pdb
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\Microsoft.Extensions.Configuration.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\Microsoft.Extensions.Primitives.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\System.Data.SqlClient.dll
+C:\Users\Alext\Documents\Projects\Releases\ObrasPublicas\sni.dll

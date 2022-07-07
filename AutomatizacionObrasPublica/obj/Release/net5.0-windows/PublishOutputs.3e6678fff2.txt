@@ -1,0 +1,11 @@
+C:\Users\Alext\Desktop\AutomatizacionObrasPublica.exe
+C:\Users\Alext\Desktop\AutomatizacionObrasPublica.dll
+C:\Users\Alext\Desktop\AutomatizacionObrasPublica.deps.json
+C:\Users\Alext\Desktop\AutomatizacionObrasPublica.runtimeconfig.json
+C:\Users\Alext\Desktop\AutomatizacionObrasPublica.pdb
+C:\Users\Alext\Desktop\System.Data.SqlClient.dll
+C:\Users\Alext\Desktop\runtimes\win-arm64\native\sni.dll
+C:\Users\Alext\Desktop\runtimes\win-x64\native\sni.dll
+C:\Users\Alext\Desktop\runtimes\win-x86\native\sni.dll
+C:\Users\Alext\Desktop\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Alext\Desktop\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

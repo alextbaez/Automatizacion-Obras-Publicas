@@ -18,6 +18,7 @@ namespace AutomatizacionObrasPublica
     {
        
         Random random = new Random();
+        string connection = @"Data Source=.\SQLEXPRESS;Initial Catalog=ObrasPublicasDB;Integrated Security=True";
        
         public Form1()
         {
@@ -38,7 +39,7 @@ namespace AutomatizacionObrasPublica
                 
                 double percent = sens1.Percentages[random.Next(sens1.Percentages.Count)];
                 textBoxDuarte.Text = percent.ToString() + "%";
-                sens1.InsertSensorInfoIntoBD(senName, loc, percent, sens1EventRegisterTime);
+                sens1.InsertSensorInfoIntoBD(senName, loc, percent, sens1EventRegisterTime, connection);
                 sens1EventRegisterTime = sens1EventRegisterTime.AddDays(10);
                 await Task.Delay(1000);
                 textBoxDuarte.Clear();
@@ -60,7 +61,7 @@ namespace AutomatizacionObrasPublica
             {
                 double percent2 = sens2.Percentages[random.Next(sens2.Percentages.Count)];
                 textBoxAvFebrero.Text = percent2.ToString() + "%";
-                sens2.InsertSensorInfoIntoBD(sen2Name, loc2, percent2, sens2EventRegisterTime);
+                sens2.InsertSensorInfoIntoBD(sen2Name, loc2, percent2, sens2EventRegisterTime, connection);
                 sens2EventRegisterTime = sens2EventRegisterTime.AddDays(10);
                 await Task.Delay(1000);
                 textBoxAvFebrero.Clear();
@@ -77,7 +78,7 @@ namespace AutomatizacionObrasPublica
 
         private void refreshSensDataGrid()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ADMINISTRATOR2\SQLEXPRESS;Initial Catalog=ObrasPublicasDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection(connection);
             SqlCommand cmd = new SqlCommand("SELECT DEVICE_NAME, PERCENTAGE, STATUS FROM SensorsTable ORDER BY DEVICE_NAME", con);
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -96,7 +97,7 @@ namespace AutomatizacionObrasPublica
             for (int i = 0; i < 20; i++)
             {
                 sat.RegisterDate = Recon1EventRegisterTime;
-                sat.InsertReconInfoIntoBD(sat);
+                sat.InsertReconInfoIntoBD(sat, connection);
                 Recon1EventRegisterTime = Recon1EventRegisterTime.AddDays(10);
                 await Task.Delay(1500);
                 refreshReconDataGrid();
@@ -105,7 +106,7 @@ namespace AutomatizacionObrasPublica
 
         public void refreshReconDataGrid()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ADMINISTRATOR2\SQLEXPRESS;Initial Catalog=ObrasPublicasDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection(connection);
             SqlCommand cmd = new SqlCommand("SELECT DEVICE_NAME, LOCATION, PHOTO, REGISTER_DATE FROM recontable ORDER BY DEVICE_NAME", con);
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -127,7 +128,7 @@ namespace AutomatizacionObrasPublica
             for (int i = 0; i < 20; i++)
             {
                 dron1.RegisterDate = Recon2EventRegisterTime;
-                dron1.InsertReconInfoIntoBD(dron1);
+                dron1.InsertReconInfoIntoBD(dron1, connection);
                 Recon2EventRegisterTime = Recon2EventRegisterTime.AddDays(10);
                 await Task.Delay(1500);
                 refreshReconDataGrid();
@@ -143,7 +144,7 @@ namespace AutomatizacionObrasPublica
             for (int i = 0; i < 20; i++)
             {
                 dron2.RegisterDate = Recon3EventRegisterTime;
-                dron2.InsertReconInfoIntoBD(dron2);
+                dron2.InsertReconInfoIntoBD(dron2, connection);
                 Recon3EventRegisterTime = Recon3EventRegisterTime.AddDays(10);
                 await Task.Delay(1500);
                 refreshReconDataGrid();

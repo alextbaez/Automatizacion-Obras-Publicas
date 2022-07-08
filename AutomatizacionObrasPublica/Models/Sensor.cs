@@ -38,11 +38,11 @@ namespace AutomatizacionObrasPublica.Models
         }
 
  
-        public void InsertSensorInfoIntoBD(string name, string location, double percentage, DateTime registerDate)
+        public void InsertSensorInfoIntoBD(string name, string location, double percentage, DateTime registerDate, string connect)
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMINISTRATOR2\SQLEXPRESS;Initial Catalog=ObrasPublicasDB;Integrated Security=True");
+                SqlConnection con = new SqlConnection(connect);
                 con.Open();
 
                 SqlCommand cmd = new SqlCommand("Insert Into sensorstable Values (@SenName,@SenLoc,@SenPercent,(" +

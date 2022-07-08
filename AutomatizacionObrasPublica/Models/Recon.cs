@@ -42,12 +42,12 @@ namespace AutomatizacionObrasPublica.Models
             set { _placePhoto = value; }
         }
 
-        public void InsertReconInfoIntoBD(Recon reconDev)
+        public void InsertReconInfoIntoBD(Recon reconDev, string connect)
         {
             try
             {
                 Random random = new Random();
-                SqlConnection con = new SqlConnection(@"Data Source=ADMINISTRATOR2\SQLEXPRESS;Initial Catalog=ObrasPublicasDB;Integrated Security=True");
+                SqlConnection con = new SqlConnection(connect);
                 con.Open();
 
                 SqlCommand cmd = new SqlCommand("Insert Into recontable Values (@ReconName,@ReconLoc,@ReconPhoto,@RegisterDate)", con);
